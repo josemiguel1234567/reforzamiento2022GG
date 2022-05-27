@@ -1,6 +1,7 @@
 package reforzamiento;
 
 import java.util.Scanner;
+
 public class ejercicio2 {
     static Scanner leerT=new Scanner(System.in);
 
@@ -55,9 +56,30 @@ public class ejercicio2 {
         }
     }
 
+    public static void cont_mun_primo() {
+        System.out.println("Ingrese un numero:");
+        int num=leerT.nextInt();
+        int numx=1;
+        while (numx <= num){
+            int cont=1;
+            int cantdiv=0;
+            while (cont<=num) {
+                if (cantdiv>2 )
+                if (numx%cont==0) {
+                    cantdiv++;
+                }
+                cont++; 
+            }if (cantdiv==2) {
+                System.out.println(numx);
+            }
+            numx=numx +1;
+        }
+    }
+
     public static void main(String[] args) {
         //serieFibonaci();
         //fibonaciN();
-        siNumeroPrimo();
+        //siNumeroPrimo();
+        cont_mun_primo();
     }    
 }
